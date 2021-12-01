@@ -18,7 +18,7 @@ Assets, or resources used
 
 ## Future Development
 
-# Created by: Group Name
+# Created by: 7
 David Vaughn
 Taylor Hall
 Daniel Wright
