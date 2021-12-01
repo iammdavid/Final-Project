@@ -2,11 +2,10 @@
 MSCH-C220 Game Jam, November 2021
 
 ## Theme
-It gives us a variety of options to play with
+The theme provides us different opportunities to implement different outcomes based on the character's decision making.
 
 ## Game Play
-Objective
-Game-play instructions
+Make it to the end before its too late.
 
 ## Impediments
 Struggles or surprises you encountered during the development of the game
