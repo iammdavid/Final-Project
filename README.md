@@ -2,7 +2,7 @@
 MSCH-C220 Game Jam, November 2021
 
 ## Theme
-How you thought about or interpreted the theme
+It gives us a variety of options to play with
 
 ## Game Play
 Objective
