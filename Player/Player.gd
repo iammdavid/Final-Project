@@ -42,7 +42,5 @@ func set_animation(anim):
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
 
-
-
-
-
+func _on_AudioStreamPlayer_finished():
+	$Music.play()
