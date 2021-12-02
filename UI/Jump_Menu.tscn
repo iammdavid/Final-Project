@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://UI/Game_Over.gd" type="Script" id=1]
+[ext_resource path="res://UI/Jump_Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/BloodstainPersonalUseBold-1GM30.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
@@ -43,25 +43,33 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="."]
+[node name="Jump1" type="Button" parent="."]
 margin_left = 425.0
 margin_top = 275.0
 margin_right = 575.0
 margin_bottom = 325.0
-text = "Start"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Jump1"
 
-[node name="Quit" type="Button" parent="."]
+[node name="Jump2" type="Button" parent="."]
 margin_left = 425.0
 margin_top = 350.0
 margin_right = 575.0
 margin_bottom = 400.0
-text = "Quit"
+text = "Jump2"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Restart_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[node name="Jump3" type="Button" parent="."]
+margin_left = 227.0
+margin_top = 302.0
+margin_right = 351.0
+margin_bottom = 370.0
+text = "Jump3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Jump1" to="." method="_on_Jump1_pressed"]
+[connection signal="pressed" from="Jump2" to="." method="_on_Jump2_pressed"]
+[connection signal="pressed" from="Jump3" to="." method="_on_Jump3_pressed"]

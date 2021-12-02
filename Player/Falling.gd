@@ -2,6 +2,7 @@ extends Node
 
 onready var SM = get_parent()
 onready var player = get_node("../..")
+onready var player_variables = get_node("/root/Player_Variables")
 
 func _ready():
 	yield(player, "ready")
@@ -18,5 +19,5 @@ func physics_process(_delta):
 		player.velocity.y = 0
 	var input_vector = Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),1.0)
 	player.set_direction(sign(input_vector.x))
-	player.velocity += player.move_speed * input_vector + player.gravity
+	player.velocity += player_variables.move_speed * input_vector + player.gravity
 	player.move_and_slide(player.velocity, Vector2.UP)

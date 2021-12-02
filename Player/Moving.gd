@@ -2,6 +2,7 @@ extends Node
 
 onready var SM = get_parent()
 onready var player = get_node("../..")
+onready var player_variables = get_node("/root/Player_Variables")
 
 func _ready():
 	yield(player, "ready")
@@ -18,7 +19,7 @@ func physics_process(_delta):
 	if Input.is_action_pressed("left") or Input.is_action_pressed("right"):
 		var input_vector = Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),1.0)
 		player.set_direction(sign(input_vector.x))
-		player.velocity += player.move_speed * input_vector
+		player.velocity += player_variables.move_speed * input_vector
 		player.move_and_slide(player.velocity, Vector2.UP)
 	else:
 		player.velocity = Vector2.ZERO
