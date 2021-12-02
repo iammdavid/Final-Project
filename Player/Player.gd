@@ -17,7 +17,10 @@ export var max_jump = 800
 export var leap_speed = 5
 export var max_leap = 200
 
+var timer = 100
 
+func _on_Timer_timeout():
+	timer -= 1
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
@@ -25,8 +28,11 @@ func _physics_process(_delta):
 	if direction < 0 and not $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = true
 	if direction > 0 and $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = false
 	
-	if $State.text != SM.state_name:
-		$State.text = SM.state_name
+	
+	$Countdown.text = "Time: " + str(timer)
+	
+	if timer <= 0:
+		get_tree().change_scene("res://UI/Game_Over.tscn")
 
 func set_direction(d):
 	direction = d
@@ -35,3 +41,8 @@ func set_animation(anim):
 	if $AnimatedSprite.animation == anim: return
 	if $AnimatedSprite.frames.has_animation(anim): $AnimatedSprite.play(anim)
 	else: $AnimatedSprite.play()
+
+
+
+
+
