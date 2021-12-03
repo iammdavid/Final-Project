@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://UI/Game_Over.gd" type="Script" id=1]
+[ext_resource path="res://UI/Jump_Menu.gd" type="Script" id=1]
 [ext_resource path="res://Assets/BloodstainPersonalUseBold-1GM30.ttf" type="DynamicFontData" id=2]
 
 [sub_resource type="DynamicFont" id=1]
@@ -43,25 +43,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="."]
-margin_left = 425.0
-margin_top = 275.0
-margin_right = 575.0
-margin_bottom = 325.0
-text = "Start"
+[node name="Jump1" type="Button" parent="."]
+margin_left = 115.614
+margin_top = 318.533
+margin_right = 306.614
+margin_bottom = 422.533
+text = "Double Jump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Quit" type="Button" parent="."]
-margin_left = 425.0
-margin_top = 350.0
-margin_right = 575.0
-margin_bottom = 400.0
-text = "Quit"
+[node name="Jump2" type="Button" parent="."]
+margin_left = 409.726
+margin_top = 311.807
+margin_right = 613.726
+margin_bottom = 418.807
+text = "High jump"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Restart_pressed"]
-[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
+[node name="Jump3" type="Button" parent="."]
+margin_left = 722.178
+margin_top = 312.066
+margin_right = 900.178
+margin_bottom = 425.066
+text = "Glider"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Jump1" to="." method="_on_Jump1_pressed"]
+[connection signal="pressed" from="Jump2" to="." method="_on_Jump2_pressed"]
+[connection signal="pressed" from="Jump3" to="." method="_on_Jump3_pressed"]
