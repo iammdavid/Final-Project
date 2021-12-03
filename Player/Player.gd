@@ -38,3 +38,7 @@ func set_animation(anim):
 
 func _on_AudioStreamPlayer_finished():
 	$Music.play()
+
+
+func _on_Enemy_body_entered(body):
+	pass # Replace with function body.

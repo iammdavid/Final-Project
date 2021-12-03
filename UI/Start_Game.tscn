@@ -43,15 +43,12 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Start" type="Button" parent="."]
+[node name="Restart" type="Button" parent="."]
 margin_left = 425.0
 margin_top = 275.0
 margin_right = 575.0
 margin_bottom = 325.0
 text = "Start"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Quit" type="Button" parent="."]
 margin_left = 425.0
@@ -63,5 +60,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Start" to="." method="_on_Restart_pressed"]
+[connection signal="pressed" from="Restart" to="." method="_on_Restart_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
