@@ -5,6 +5,7 @@ onready var player_variables = get_node("/root/Player_Variables")
 func _on_Jump1_pressed():
 	player_variables.move_speed = 20
 	player_variables.max_move = 400
+	player_variables.double_jump = true
 	get_tree().change_scene("res://Game.tscn")
 
 

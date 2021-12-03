@@ -48,7 +48,7 @@ margin_left = 115.614
 margin_top = 318.533
 margin_right = 306.614
 margin_bottom = 422.533
-text = "Speed"
+text = "Double Jump"
 __meta__ = {
 "_edit_use_anchors_": false
 }

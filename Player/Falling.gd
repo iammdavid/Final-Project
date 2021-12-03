@@ -15,6 +15,8 @@ func physics_process(_delta):
 	if player.is_on_floor() and player.velocity.dot(Vector2.UP) < 0:
 		player.velocity.y = 0
 		SM.set_state("Idle")
+		if player_variables.double_jump:
+			player_variables.jump_used = false
 	if player.is_on_ceiling():
 		player.velocity.y = 0
 	var input_vector = Vector2(Input.get_action_strength("right") - Input.get_action_strength("left"),1.0)
@@ -22,4 +24,7 @@ func physics_process(_delta):
 	player.velocity += player_variables.move_speed * input_vector + player.gravity
 	if player_variables.glide and Input.is_action_pressed("jump"):
 		player.velocity.y /= 1.5
+	if player_variables.double_jump and Input.is_action_pressed("jump") and not player_variables.jump_used:
+		player.velocity.y = -1000
+		player_variables.jump_used = true
 	player.move_and_slide(player.velocity, Vector2.UP)

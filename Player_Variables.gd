@@ -10,3 +10,6 @@ var leap_speed = 5
 var max_leap = 200
 
 var glide = false
+
+var double_jump = false
+var jump_used = false
