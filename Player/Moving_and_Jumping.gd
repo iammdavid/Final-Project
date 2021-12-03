@@ -10,7 +10,7 @@ func _ready():
 func physics_process(_delta):
 	if not player.is_on_floor():
 		SM.set_state("Falling")
-
+		
 	player.jump_power.y = clamp(player.jump_power.y - player_variables.jump_speed, -player_variables.max_jump, 0)
 	if Input.is_action_just_released("jump"):
 		player.velocity += player.jump_power
