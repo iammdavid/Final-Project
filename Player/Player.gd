@@ -18,9 +18,18 @@ export var leap_speed = 5
 export var max_leap = 200
 
 var timer = 100
+var timerDamage = false
 
 func _on_Timer_timeout():
+	if timerDamage: 
+		timer -= 1
 	timer -= 1
+
+func set_timer_damage():
+	if timerDamage:
+		timerDamage = false
+	else:
+		timerDamage = true
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
