@@ -308,6 +308,18 @@ polygon = PoolVector2Array( 2499.03, 506.967, 2534.38, 499.896, 2544.28, 563.536
 
 [node name="Tween" type="Tween" parent="Enemies/Enemy"]
 
+[node name="Enemy2" type="Area2D" parent="Enemies"]
+
+[node name="Sprite" type="Sprite" parent="Enemies/Enemy2"]
+position = Vector2( 1872.1, 907.94 )
+scale = Vector2( 0.955806, 1 )
+texture = ExtResource( 12 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Enemies/Enemy2"]
+polygon = PoolVector2Array( 1849.9, 880.292, 1901.1, 881.296, 1896.08, 916.436, 1902.11, 950.572, 1894.08, 960.612, 1849.4, 960.11, 1840.86, 944.548, 1847.89, 918.946, 1852.41, 896.858 )
+
+[node name="Tween" type="Tween" parent="Enemies/Enemy2"]
+
 [connection signal="finished" from="Player/Music" to="Player" method="_on_AudioStreamPlayer_finished"]
 [connection signal="timeout" from="Player/Timer" to="Player" method="_on_Timer_timeout"]
 [connection signal="body_entered" from="Enemies/Enemy" to="Player" method="_on_Enemy_body_entered"]
